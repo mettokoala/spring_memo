@@ -18,5 +18,8 @@ public class MemoService {
 	public List<Memo> getMemos() {
 		return memoRepository.findAll();
 	}
-
+	
+	public Memo postMemo(Memo memo) {
+		return memoRepository.save(memo);
+	}
 }

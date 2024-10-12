@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新規メモ作成画面</title>
+</head>
+<body>
+	<h1>新規メモ</h1>
+	<form action="/create" method="post">
+		<label>タイトル</label>
+		<input type="text" id="title" name="title" required><br>
+		<label>内容</label>
+		<textarea id="content" name="content" required></textarea><br>
+		<button>作成</button>
+	</form>
+	<a href="/">戻る</a>
+</body>
+</html>
