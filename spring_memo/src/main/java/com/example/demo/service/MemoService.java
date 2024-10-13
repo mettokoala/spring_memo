@@ -22,4 +22,12 @@ public class MemoService {
 	public Memo postMemo(Memo memo) {
 		return memoRepository.save(memo);
 	}
+	
+	public Memo getMemoDetail(Long id) {
+		return memoRepository.findById(id).orElse(new Memo());
+	}
+	
+	public void deleteMemo(Long id) {
+		memoRepository.deleteById(id);
+	}
 }

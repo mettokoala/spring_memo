@@ -9,6 +9,8 @@
 	<a href="create.html">新規作成画面へ</a>
 <ul>
 	<li th:each="memo : ${memos}">
+		<a th:href="@{|/edit/${memo.id}|}">[編集]</a>
+		<a th:href="@{|/delete/${memo.id}|}" onclick="return confirm('本当に削除していいですか？');">[削除]</a>
 		<strong th:text="${memo.title}"></strong><span th:text="${memo.content}"></span>
 	</li>
 </ul>
