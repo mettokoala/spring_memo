@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>メモ編集画面</title>
+</head>
+<body>
+	<h1>メモ</h1>
+	<form th:action="@{|/update/${memo.id}|}" method="post">
+		<label>タイトル</label>
+		<input type="text" id="title" name="title" th:value="${memo.title}" required><br>
+		<label>内容</label>
+		<textarea id="content" name="content" th:text="${memo.content}" required></textarea><br>
+		<button>更新</button>
+	</form>
+	<a href="/">戻る</a>
+</body>
+</html>
